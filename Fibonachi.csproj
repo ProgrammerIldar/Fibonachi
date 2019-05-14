@@ -82,6 +82,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="InitializationException.cs" />
     <Compile Include="mainForms.cs">
       <SubType>Form</SubType>
@@ -93,6 +99,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainForms.resx">
       <DependentUpon>mainForms.cs</DependentUpon>
@@ -122,6 +131,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\12.png" />
+    <None Include="Resources\лампочка-иконка-png-7.png" />
     <None Include="Resources\depositphotos_22142055-stock-photo-realms-of-mathematics.jpg" />
     <None Include="Resources\1454587094_cifry.jpg" />
     <None Include="Resources\shutdown____.png" />

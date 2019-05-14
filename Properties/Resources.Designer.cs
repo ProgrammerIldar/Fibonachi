@@ -63,6 +63,16 @@ namespace Fibonachi.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _12 {
+            get {
+                object obj = ResourceManager.GetObject("12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1454587094_cifry {
             get {
                 object obj = ResourceManager.GetObject("1454587094_cifry", resourceCulture);
@@ -156,6 +166,16 @@ namespace Fibonachi.Properties {
         internal static System.Drawing.Bitmap Безымянный {
             get {
                 object obj = ResourceManager.GetObject("Безымянный", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap лампочка_иконка_png_7 {
+            get {
+                object obj = ResourceManager.GetObject("лампочка-иконка-png-7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

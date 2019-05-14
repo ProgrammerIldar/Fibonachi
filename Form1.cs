@@ -73,6 +73,7 @@ namespace Fibonachi
             if (this.InputFib.Text != "")
             {
                     listBoxFib.Items.Add(Int32.Parse(this.InputFib.Text));
+                    this.InputFib.Text = "";
                
             }
             else
@@ -159,17 +160,20 @@ namespace Fibonachi
                 SotrVozRadio.Enabled = true;
                 SortUbRadio.Enabled = true;
                 minmaxCombo.Enabled = true;
+                Save.Enabled = false;
+                LoadFile.Enabled = false;
             }
            
         }
 
         private void InputFib_Click(object sender, EventArgs e)
         {
-           
+            ToolTip inputTip = new ToolTip();
+            inputTip.SetToolTip(InputFib,"Ввод значений в лист" );
 
            if(InputFib.Text=="")
             {
-                listBoxFib.Items.Clear();
+               // listBoxFib.Items.Clear();
                 
             }
         }
@@ -222,7 +226,8 @@ namespace Fibonachi
 
         private void Button2_Click_2(object sender, EventArgs e)
         {
-
+            ToolTip tvich = new ToolTip();
+            tvich.SetToolTip(vichBtn, "Вычисление");
            
 
             //Выбор вычисления Фибоначи
@@ -292,8 +297,6 @@ namespace Fibonachi
             }
         }
 
-       
-
         //Загрузить в файл
         private void Button2_Click_3(object sender, EventArgs e)
         {
@@ -318,7 +321,10 @@ namespace Fibonachi
 
         private void Button2_Click_4(object sender, EventArgs e)
         {
-            this.Close();
+            ToolTip tClouse = new ToolTip();
+            tClouse.SetToolTip(helpbtn, "Закрыть программу");
+            Application.Exit();
+
         }
 
         private void MinmaxCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -367,6 +373,15 @@ namespace Fibonachi
         private void ListBoxFib_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void Button3_Click_1(object sender, EventArgs e)
+        {
+            ToolTip t = new ToolTip();
+            t.SetToolTip(helpbtn,"Помощь");
+
+            HelpForm helpForm = new HelpForm();
+            helpForm.Show();
         }
     }
 }

@@ -37,6 +37,10 @@
             this.SotrVozRadio = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.NameInputLabel = new System.Windows.Forms.Label();
+            this.minmaxCombo = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.textBoxValueMax = new MetroFramework.Controls.MetroTextBox();
+            this.helpbtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.LoadFile = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -46,9 +50,6 @@
             this.Save = new System.Windows.Forms.Button();
             this.Enter = new System.Windows.Forms.Button();
             this.RondomNumers = new System.Windows.Forms.Button();
-            this.minmaxCombo = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.textBoxValueMax = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +57,7 @@
             // InputFib
             // 
             this.InputFib.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.InputFib.Location = new System.Drawing.Point(317, 173);
+            this.InputFib.Location = new System.Drawing.Point(335, 210);
             this.InputFib.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.InputFib.Name = "InputFib";
             this.InputFib.Size = new System.Drawing.Size(300, 35);
@@ -68,7 +69,7 @@
             this.listBoxFib.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxFib.FormattingEnabled = true;
             this.listBoxFib.ItemHeight = 25;
-            this.listBoxFib.Location = new System.Drawing.Point(280, 402);
+            this.listBoxFib.Location = new System.Drawing.Point(298, 439);
             this.listBoxFib.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.listBoxFib.Name = "listBoxFib";
             this.listBoxFib.Size = new System.Drawing.Size(298, 304);
@@ -82,7 +83,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Вычисление Фибоначи",
             "Вычислить среднеарефметическое значение"});
-            this.comboBox1.Location = new System.Drawing.Point(262, 81);
+            this.comboBox1.Location = new System.Drawing.Point(280, 118);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(588, 33);
@@ -102,7 +103,7 @@
             // 
             this.SortUbRadio.AutoSize = true;
             this.SortUbRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SortUbRadio.Location = new System.Drawing.Point(523, 348);
+            this.SortUbRadio.Location = new System.Drawing.Point(541, 385);
             this.SortUbRadio.Name = "SortUbRadio";
             this.SortUbRadio.Size = new System.Drawing.Size(119, 22);
             this.SortUbRadio.TabIndex = 20;
@@ -115,7 +116,7 @@
             // 
             this.SotrVozRadio.AutoSize = true;
             this.SotrVozRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SotrVozRadio.Location = new System.Drawing.Point(311, 348);
+            this.SotrVozRadio.Location = new System.Drawing.Point(329, 385);
             this.SotrVozRadio.Name = "SotrVozRadio";
             this.SotrVozRadio.Size = new System.Drawing.Size(140, 22);
             this.SotrVozRadio.TabIndex = 21;
@@ -128,7 +129,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(44, 87);
+            this.label1.Location = new System.Drawing.Point(62, 124);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(186, 22);
             this.label1.TabIndex = 24;
@@ -138,16 +139,56 @@
             // 
             this.NameInputLabel.AutoSize = true;
             this.NameInputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
-            this.NameInputLabel.Location = new System.Drawing.Point(80, 177);
+            this.NameInputLabel.Location = new System.Drawing.Point(98, 214);
             this.NameInputLabel.Name = "NameInputLabel";
             this.NameInputLabel.Size = new System.Drawing.Size(150, 22);
             this.NameInputLabel.TabIndex = 24;
             this.NameInputLabel.Text = "Ввведите число:";
             // 
+            // minmaxCombo
+            // 
+            this.minmaxCombo.FormattingEnabled = true;
+            this.minmaxCombo.ItemHeight = 23;
+            this.minmaxCombo.Items.AddRange(new object[] {
+            "Максимальное значение",
+            "Минимальное значение"});
+            this.minmaxCombo.Location = new System.Drawing.Point(335, 273);
+            this.minmaxCombo.Name = "minmaxCombo";
+            this.minmaxCombo.Size = new System.Drawing.Size(300, 29);
+            this.minmaxCombo.TabIndex = 29;
+            this.minmaxCombo.SelectedIndexChanged += new System.EventHandler(this.MinmaxCombo_SelectedIndexChanged);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(335, 324);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(72, 19);
+            this.metroLabel1.TabIndex = 30;
+            this.metroLabel1.Text = "Значение:";
+            // 
+            // textBoxValueMax
+            // 
+            this.textBoxValueMax.Location = new System.Drawing.Point(413, 322);
+            this.textBoxValueMax.Name = "textBoxValueMax";
+            this.textBoxValueMax.Size = new System.Drawing.Size(56, 23);
+            this.textBoxValueMax.TabIndex = 31;
+            this.textBoxValueMax.Text = "0";
+            // 
+            // helpbtn
+            // 
+            this.helpbtn.BackgroundImage = global::Fibonachi.Properties.Resources._12;
+            this.helpbtn.Location = new System.Drawing.Point(894, 24);
+            this.helpbtn.Name = "helpbtn";
+            this.helpbtn.Size = new System.Drawing.Size(63, 51);
+            this.helpbtn.TabIndex = 32;
+            this.helpbtn.UseVisualStyleBackColor = true;
+            this.helpbtn.Click += new System.EventHandler(this.Button3_Click_1);
+            // 
             // button2
             // 
             this.button2.Image = global::Fibonachi.Properties.Resources.shutdown____;
-            this.button2.Location = new System.Drawing.Point(606, 648);
+            this.button2.Location = new System.Drawing.Point(624, 685);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(142, 100);
             this.button2.TabIndex = 28;
@@ -157,7 +198,7 @@
             // LoadFile
             // 
             this.LoadFile.Image = global::Fibonachi.Properties.Resources.Безымянный;
-            this.LoadFile.Location = new System.Drawing.Point(76, 520);
+            this.LoadFile.Location = new System.Drawing.Point(94, 557);
             this.LoadFile.Name = "LoadFile";
             this.LoadFile.Size = new System.Drawing.Size(144, 100);
             this.LoadFile.TabIndex = 27;
@@ -167,17 +208,16 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Fibonachi.Properties.Resources.icons8_обратная_численная_сортировка_48;
-            this.pictureBox2.Location = new System.Drawing.Point(469, 334);
+            this.pictureBox2.Location = new System.Drawing.Point(487, 371);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 50);
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
-          
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Fibonachi.Properties.Resources.icons8_численная_сортировка_48;
-            this.pictureBox1.Location = new System.Drawing.Point(247, 334);
+            this.pictureBox1.Location = new System.Drawing.Point(265, 371);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 50);
             this.pictureBox1.TabIndex = 25;
@@ -186,7 +226,7 @@
             // vichBtn
             // 
             this.vichBtn.Image = ((System.Drawing.Image)(resources.GetObject("vichBtn.Image")));
-            this.vichBtn.Location = new System.Drawing.Point(644, 139);
+            this.vichBtn.Location = new System.Drawing.Point(662, 176);
             this.vichBtn.Name = "vichBtn";
             this.vichBtn.Size = new System.Drawing.Size(144, 100);
             this.vichBtn.TabIndex = 23;
@@ -196,7 +236,7 @@
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(76, 648);
+            this.button1.Location = new System.Drawing.Point(94, 685);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 100);
             this.button1.TabIndex = 22;
@@ -206,7 +246,7 @@
             // Save
             // 
             this.Save.Image = ((System.Drawing.Image)(resources.GetObject("Save.Image")));
-            this.Save.Location = new System.Drawing.Point(76, 403);
+            this.Save.Location = new System.Drawing.Point(94, 440);
             this.Save.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(144, 100);
@@ -217,7 +257,7 @@
             // Enter
             // 
             this.Enter.Image = ((System.Drawing.Image)(resources.GetObject("Enter.Image")));
-            this.Enter.Location = new System.Drawing.Point(606, 403);
+            this.Enter.Location = new System.Drawing.Point(624, 440);
             this.Enter.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Enter.Name = "Enter";
             this.Enter.Size = new System.Drawing.Size(144, 98);
@@ -228,7 +268,7 @@
             // RondomNumers
             // 
             this.RondomNumers.Image = ((System.Drawing.Image)(resources.GetObject("RondomNumers.Image")));
-            this.RondomNumers.Location = new System.Drawing.Point(605, 520);
+            this.RondomNumers.Location = new System.Drawing.Point(623, 557);
             this.RondomNumers.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.RondomNumers.Name = "RondomNumers";
             this.RondomNumers.Size = new System.Drawing.Size(143, 100);
@@ -236,41 +276,12 @@
             this.RondomNumers.UseVisualStyleBackColor = true;
             this.RondomNumers.Click += new System.EventHandler(this.Button1_Click_1);
             // 
-            // minmaxCombo
-            // 
-            this.minmaxCombo.FormattingEnabled = true;
-            this.minmaxCombo.ItemHeight = 23;
-            this.minmaxCombo.Items.AddRange(new object[] {
-            "Максимальное значение",
-            "Минимальное значение"});
-            this.minmaxCombo.Location = new System.Drawing.Point(317, 236);
-            this.minmaxCombo.Name = "minmaxCombo";
-            this.minmaxCombo.Size = new System.Drawing.Size(300, 29);
-            this.minmaxCombo.TabIndex = 29;
-            this.minmaxCombo.SelectedIndexChanged += new System.EventHandler(this.MinmaxCombo_SelectedIndexChanged);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(317, 287);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(72, 19);
-            this.metroLabel1.TabIndex = 30;
-            this.metroLabel1.Text = "Значение:";
-            // 
-            // textBoxValueMax
-            // 
-            this.textBoxValueMax.Location = new System.Drawing.Point(395, 285);
-            this.textBoxValueMax.Name = "textBoxValueMax";
-            this.textBoxValueMax.Size = new System.Drawing.Size(56, 23);
-            this.textBoxValueMax.TabIndex = 31;
-            this.textBoxValueMax.Text = "0";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 818);
+            this.ClientSize = new System.Drawing.Size(990, 912);
+            this.Controls.Add(this.helpbtn);
             this.Controls.Add(this.textBoxValueMax);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.minmaxCombo);
@@ -326,6 +337,7 @@
         private MetroFramework.Controls.MetroComboBox minmaxCombo;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox textBoxValueMax;
+        private System.Windows.Forms.Button helpbtn;
     }
 }
 

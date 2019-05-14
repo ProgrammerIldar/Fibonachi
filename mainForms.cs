@@ -16,7 +16,7 @@ namespace Fibonachi
         {
             InitializeComponent();
             timer1.Enabled = true;
-            timer1.Interval = 5;
+            timer1.Interval = 8;
             metroProgressBar1.Maximum = 100;
             metroProgressBar1.Value = 0;
         }
@@ -38,6 +38,25 @@ namespace Fibonachi
             else
             {
                 metroProgressBar1.Value++;
+            }
+        }
+
+
+        Point formLocation;
+        Point mouseLocation;
+        private void MainForms_MouseDown(object sender, MouseEventArgs e)
+        {
+            formLocation = this.Location;
+            mouseLocation = e.Location;
+        }
+
+        private void MainForms_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Location != mouseLocation)
+            {
+                formLocation.X += (e.Location.X - mouseLocation.X);
+                formLocation.Y += (e.Location.Y - mouseLocation.Y);
+                this.Location = formLocation;
             }
         }
     }

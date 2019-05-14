@@ -17,7 +17,7 @@ namespace Fibonachi.Clasess
             Random rendom = new Random();
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = rendom.Next(0, 100);
+                array[i] = rendom.Next(0, 1000);
                 
             }
             return array;

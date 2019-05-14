@@ -56,6 +56,8 @@
             this.RightToLeftLayout = true;
             this.Text = "main";
             this.Load += new System.EventHandler(this.MainForms_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForms_MouseDown);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForms_MouseUp);
             this.ResumeLayout(false);
 
         }

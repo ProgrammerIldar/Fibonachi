@@ -117,41 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="лампочка-иконка-png-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\лампочка-иконка-png-7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Безымянный" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Безымянный.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="systemshutdown_103390" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\systemshutdown_103390.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="document" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="g" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\g.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1454587094_cifry" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1454587094_cifry.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-численная-сортировка-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\icons8-численная-сортировка-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-обратная-численная-сортировка-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\icons8-обратная-численная-сортировка-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="depositphotos_22142055-stock-photo-realms-of-mathematics" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\depositphotos_22142055-stock-photo-realms-of-mathematics.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shutdown____" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shutdown____.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shutdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shutdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="metroLabel1.Text" xml:space="preserve">
+    <value>Программа выполняет две функции:
+1. Выводит последовательность Фибоначи 
+2. Выводит среднее арифмитическое число массива
+Есть дополнительные функции такие как сохранение результатов в файл при работе с числами Фибоначи.
+При загрузке программы могут быть доступны только две кнопки:
+1)Кнопка помощь(лампочка)
+2)Кнопка закрытия(выключения)
+ При выборе в выподающем списке одного из пунктов будут доступны некоторые функции
+
+1. При выборе вычисления функции Фибоначи будет доступна кнопка вычилить(калькулятор)
+2.Ввод чисел до какого чила необходимо посчитать числа Фибоначи
+3.Выподающий список который выбирает максимальное и минимальное число
+4. Очистить все поля(красный крестик)
+5. Два точечных выбора по возрастанию и убванию(стрелочки)
+данная функция сортирует данные
+6.Сохраить в файл(дискета)
+7.Открыть файл(блокнот)
+Значения записываются в тектовый формат и сохраняются в любом удобном месте для пользователя. 
+Так же пользователь может загрузить файловый документ в список из любого места на компьютере. 
+ При выборе Вычислить среднее арефметическое число списка пользователю становятся доступны кнопки добавления( карандаш) и рондом( стрелочки на синем фоне). 
+Кнопка добавления позволяет пользователю самостоятельно добавлять любые числа в список. 
+Кнопка рондом может сгенерировать числа самостоятельно от 0 до 1000.  После этого пользователь сможет дальше добавлять в список.
+В программе предусмотрены следующие фильтры:
+1.Сортировка по возрастанию
+2.Сортировка по убванию
+3. Поиск максимального числа
+4. Поиск минимального числа
+В режиме вычислить среднеарефметичкое значение если нажать на кнопку 
+ввода(калькулятор) то если список пуст в значении появится сообщение Nan, что означает что в списке нет чисел.  
+Если сгенерировать или ввести значения то нажав на кнопку ввода(калькулятор)то в текстовое поле(значение) выведиться значение.</value>
   </data>
 </root>
