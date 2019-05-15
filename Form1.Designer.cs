@@ -183,7 +183,7 @@
             this.helpbtn.Size = new System.Drawing.Size(63, 51);
             this.helpbtn.TabIndex = 32;
             this.helpbtn.UseVisualStyleBackColor = true;
-            this.helpbtn.Click += new System.EventHandler(this.Button3_Click_1);
+            this.helpbtn.Click += new System.EventHandler(this.Help);
             // 
             // button2
             // 
@@ -203,7 +203,7 @@
             this.LoadFile.Size = new System.Drawing.Size(144, 100);
             this.LoadFile.TabIndex = 27;
             this.LoadFile.UseVisualStyleBackColor = true;
-            this.LoadFile.Click += new System.EventHandler(this.Button2_Click_3);
+            this.LoadFile.Click += new System.EventHandler(this.LoadFile_);
             // 
             // pictureBox2
             // 
@@ -231,7 +231,7 @@
             this.vichBtn.Size = new System.Drawing.Size(144, 100);
             this.vichBtn.TabIndex = 23;
             this.vichBtn.UseVisualStyleBackColor = true;
-            this.vichBtn.Click += new System.EventHandler(this.Button2_Click_2);
+            this.vichBtn.Click += new System.EventHandler(this.Vichislenie);
             // 
             // button1
             // 
@@ -252,7 +252,7 @@
             this.Save.Size = new System.Drawing.Size(144, 100);
             this.Save.TabIndex = 14;
             this.Save.UseVisualStyleBackColor = true;
-            this.Save.Click += new System.EventHandler(this.Button4_Click);
+            this.Save.Click += new System.EventHandler(this.SaveInTxt);
             // 
             // Enter
             // 
@@ -263,7 +263,7 @@
             this.Enter.Size = new System.Drawing.Size(144, 98);
             this.Enter.TabIndex = 11;
             this.Enter.UseVisualStyleBackColor = true;
-            this.Enter.Click += new System.EventHandler(this.Button2_Click_1);
+            this.Enter.Click += new System.EventHandler(this.Add_in_List);
             // 
             // RondomNumers
             // 
@@ -274,7 +274,7 @@
             this.RondomNumers.Size = new System.Drawing.Size(143, 100);
             this.RondomNumers.TabIndex = 9;
             this.RondomNumers.UseVisualStyleBackColor = true;
-            this.RondomNumers.Click += new System.EventHandler(this.Button1_Click_1);
+            this.RondomNumers.Click += new System.EventHandler(this.Rondom_numb);
             // 
             // MainForm
             // 

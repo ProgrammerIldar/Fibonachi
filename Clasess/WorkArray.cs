@@ -24,12 +24,6 @@ namespace Fibonachi.Clasess
         }
 
 
-        //Вычисление среднеарефмитического 
-
-
-
-
-
         // Максимальное значение
 
         public int MaxValueIntegerToListInt(IList list)
@@ -40,7 +34,7 @@ namespace Fibonachi.Clasess
             return listInt.Max();
         }
 
-        // Максимальное значение
+        // Минимальное значение
         public int MinValueIntegerToListInt(IList list)
         {
             IList<int> listInt = list.Cast<int>().

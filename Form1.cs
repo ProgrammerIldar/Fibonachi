@@ -1,10 +1,9 @@
 ﻿
+using Fibonachi.Clasess;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
-using Fibonachi.Clasess;
 
 namespace Fibonachi
 {
@@ -59,27 +58,15 @@ namespace Fibonachi
            
         }
 
+        // Кнопка для ввода сч
         private void Button1_Click_1(object sender, EventArgs e)
         {
-            WorkArray workArray = new WorkArray();
-            foreach (var item in workArray.RondomArrayList())
-            {
-                listBoxFib.Items.Add(item);
-            }
+            
         }
 
         private void Button2_Click_1(object sender, EventArgs e)
         {
-            if (this.InputFib.Text != "")
-            {
-                    listBoxFib.Items.Add(Int32.Parse(this.InputFib.Text));
-                    this.InputFib.Text = "";
-               
-            }
-            else
-            {
-                MessageBox.Show("Введите значения");
-            }
+            
             
         }
 
@@ -91,31 +78,7 @@ namespace Fibonachi
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dlg = new SaveFileDialog();
-            dlg.FileName = "Document"; //Имя файла по умолчанию
-            dlg.DefaultExt = ".txt"; // Расширение файла по умолчанию
-            dlg.Filter = "Text documents (.txt)|*.txt";
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                StreamWriter writer = new StreamWriter(dlg.FileName);
-                
-                if(SotrVozRadio.Checked)
-                {
-                    writer.WriteLine("Ряд Фибоначи до " + InputFib.Text+ " (по возрастанию):");
-                }
-                else
-                
-                    writer.WriteLine("Ряд Фибоначи до " + InputFib.Text+ " (по убванию):");
-                
-                
-                for (int i = 0; i < listBoxFib.Items.Count; i++)
-                {
-                  
-                    writer.WriteLine((int)listBoxFib.Items[i]);
-                }
-                writer.Close();
-            }
-            dlg.Dispose();
+            
         }
         private void Button3_Click(object sender, EventArgs e)
         {
@@ -226,95 +189,14 @@ namespace Fibonachi
 
         private void Button2_Click_2(object sender, EventArgs e)
         {
-            ToolTip tvich = new ToolTip();
-            tvich.SetToolTip(vichBtn, "Вычисление");
-
-            //Выбор вычисления Фибоначи
-            if (comboBox1.SelectedIndex == 0)
-            {
-
-                listBoxFib.Items.Clear();
-                WorkArray workArray = new WorkArray();
-                int a, b, c, num;
-                a = 0;
-                b = 1;
-                listBoxFib.Items.Add(a);
-                listBoxFib.Items.Add(b);
-
-
-                try
-                {
-                    num = Convert.ToInt32(InputFib.Text);
-
-                    for (int i = 2; i <= num; i++)
-                    {
-                        c = a + b;
-                        listBoxFib.Items.Add(c);
-                        a = b;
-                        b = c;
-                    }
-
-                }
-
-                catch (Exception)
-                {
-                    if (InputFib.Text == "")
-                    {
-                        listBoxFib.Items.Clear();
-                        MessageBox.Show("Пустая строка введите число");
-                    }
-                }
-            }
-
-            //Выбор для вычисления среднеарифметического
-            
-            if(comboBox1.SelectedIndex==1)
-            {
-
-                try
-                {
-                    int n = listBoxFib.Items.Count;
-                    double sum = 0;
-                    for (int i = 0; i < n; i++)
-                    {
-                        sum = sum + double.Parse(listBoxFib.Items[i].ToString());
-                    }
-
-                    double result = sum / n;
-                    textBoxValueMax.Text = result.ToString();
-
-                   
-
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
-
-
-            }
+           
         }
 
         //Загрузить в файл
         private void Button2_Click_3(object sender, EventArgs e)
         {
 
-            OpenFileDialog dlg = new OpenFileDialog();
            
-            dlg.DefaultExt = ".txt"; // Расширение файла по умолчанию
-            dlg.Filter = "Text documents (.txt)|*.txt";
-
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                string[]file = File.ReadAllLines(dlg.FileName);
-
-                foreach (var item in file )
-                {
-                    listBoxFib.Items.Add(item);
-                }
-                
-            }
            
         }
 
@@ -376,11 +258,161 @@ namespace Fibonachi
 
         private void Button3_Click_1(object sender, EventArgs e)
         {
+            
+        }
+
+        private void Vichislenie(object sender, EventArgs e)
+        {
+            ToolTip tvich = new ToolTip();
+            tvich.SetToolTip(vichBtn, "Вычисление");
+
+            //Выбор вычисления Фибоначи
+            if (comboBox1.SelectedIndex == 0)
+            {
+
+                listBoxFib.Items.Clear();
+                WorkArray workArray = new WorkArray();
+                int a, b, c, num;
+                a = 0;
+                b = 1;
+                listBoxFib.Items.Add(a);
+                listBoxFib.Items.Add(b);
+
+
+                try
+                {
+                    num = Convert.ToInt32(InputFib.Text);
+
+                    for (int i = 2; i <= num; i++)
+                    {
+                        c = a + b;
+                        listBoxFib.Items.Add(c);
+                        a = b;
+                        b = c;
+                    }
+
+                }
+
+                catch (Exception)
+                {
+                    if (InputFib.Text == "")
+                    {
+                        listBoxFib.Items.Clear();
+                        MessageBox.Show("Пустая строка введите число");
+                    }
+                }
+            }
+
+            //Выбор для вычисления среднеарифметического
+
+            if (comboBox1.SelectedIndex == 1)
+            {
+
+                try
+                {
+                    int n = listBoxFib.Items.Count;
+                    double sum = 0;
+                    for (int i = 0; i < n; i++)
+                    {
+                        sum = sum + double.Parse(listBoxFib.Items[i].ToString());
+                    }
+
+                    double result = sum / n;
+                    textBoxValueMax.Text = result.ToString();
+
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+
+            }
+        }
+
+        private void Add_in_List(object sender, EventArgs e)
+        {
+            if (this.InputFib.Text != "")
+            {
+                listBoxFib.Items.Add(Int32.Parse(this.InputFib.Text));
+                this.InputFib.Text = "";
+
+            }
+            else
+            {
+                MessageBox.Show("Введите значения");
+            }
+        }
+
+        private void Help(object sender, EventArgs e)
+        {
             ToolTip t = new ToolTip();
-            t.SetToolTip(helpbtn,"Помощь");
+            t.SetToolTip(helpbtn, "Помощь");
 
             HelpForm helpForm = new HelpForm();
             helpForm.Show();
+        }
+
+        private void Rondom_numb(object sender, EventArgs e)
+        {
+            WorkArray workArray = new WorkArray();
+            foreach (var item in workArray.RondomArrayList())
+            {
+                listBoxFib.Items.Add(item);
+            }
+        }
+
+        private void SaveInTxt(object sender, EventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.FileName = "Document"; //Имя файла по умолчанию
+            dlg.DefaultExt = ".txt"; // Расширение файла по умолчанию
+            dlg.Filter = "Text documents (.txt)|*.txt";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter writer = new StreamWriter(dlg.FileName);
+
+                if (SotrVozRadio.Checked)
+                {
+                    writer.WriteLine("Ряд Фибоначи до " + InputFib.Text + " (по возростанию):");
+                }
+
+                if(SortUbRadio.Checked)
+                
+                {
+                    writer.WriteLine("Ряд Фибоначи до " + InputFib.Text + " (по убыванию):");
+                }
+                
+
+
+                for (int i = 0; i < listBoxFib.Items.Count; i++)
+                {
+
+                    writer.WriteLine((int)listBoxFib.Items[i]);
+                }
+                writer.Close();
+            }
+            dlg.Dispose();
+        }
+
+        private void LoadFile_(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+
+            dlg.DefaultExt = ".txt"; // Расширение файла по умолчанию
+            dlg.Filter = "Text documents (.txt)|*.txt";
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string[] file = File.ReadAllLines(dlg.FileName);
+
+                foreach (var item in file)
+                {
+                    listBoxFib.Items.Add(item);
+                }
+
+            }
         }
     }
 }
