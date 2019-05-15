@@ -228,7 +228,6 @@ namespace Fibonachi
         {
             ToolTip tvich = new ToolTip();
             tvich.SetToolTip(vichBtn, "Вычисление");
-           
 
             //Выбор вычисления Фибоначи
             if (comboBox1.SelectedIndex == 0)
